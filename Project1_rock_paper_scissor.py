@@ -1,3 +1,4 @@
+
 import random
 
 rock = """
@@ -53,6 +54,3 @@ else:
 
     elif user_choice > computer_choice:
         print("You Win!")
-
-    else:
-        print("You Lose!")
