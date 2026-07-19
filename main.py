@@ -1,0 +1,10 @@
+roll_no=[1,2,3,4,5]
+names=['Sneha','Preethi','Pavan']
+mixlist=[1,'Priya',2.0,True]
+print(names)
+print(mixlist)
+numbers=[10,20,0,-1,7]
+print(numbers[4])
+print(numbers[-1])
+print(numbers[0:4])
+print(numbers[0:5:2])
