@@ -102,7 +102,6 @@ Computer chose:
 You Win!
 ```
 
-(Add your output screenshots here)
 
 ---
 
