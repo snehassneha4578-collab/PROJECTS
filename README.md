@@ -101,7 +101,7 @@ Computer chose:
 
 You Win!
 ```
-
+![Output Screenshot](output.png)
 
 ---
 
