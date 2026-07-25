@@ -1,3 +1,9 @@
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Language-Python-blue?style=for-the-badge&logo=python">
+  <img src="https://img.shields.io/badge/Project-Game-green?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge">
+</p>
 # 🔐 Python Password Generator
 
 ## 📖 Description
