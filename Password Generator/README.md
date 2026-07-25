@@ -61,7 +61,7 @@ python password_generator.py
 
 ## 📸 Output
 
-![Output](output.png)
+![Output](outputPass.png)
 
 ---
 
@@ -89,6 +89,4 @@ This project helps beginners understand how to:
 
 ---
 
-## 👩‍💻 Author
 
-**Sneha S**
