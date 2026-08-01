@@ -1,76 +1,76 @@
-# Scientific Calculator (Java)
+# 🧮 Scientific Calculator (Java)
 
-A simple Scientific Calculator developed using Java. This console-based application performs basic arithmetic operations along with several scientific calculations.
+<p align="center">
+
+![Java](https://img.shields.io/badge/Java-17-orange?style=for-the-badge&logo=openjdk&logoColor=white)
+![Platform](https://img.shields.io/badge/Platform-Console-blue?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge)
+![IDE](https://img.shields.io/badge/IDE-VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-success?style=for-the-badge)
+
+</p>
+
+A **Scientific Calculator** built using **Java**. This console-based application performs basic arithmetic operations along with several scientific mathematical calculations. The project demonstrates Java programming fundamentals, user input handling, mathematical functions, and logical problem-solving.
 
 ---
 
-## Features
+# ✨ Features
+
+## ➕ Basic Operations
 
 - Addition
 - Subtraction
 - Multiplication
 - Division
+
+## 🔬 Scientific Operations
+
 - Square
 - Square Root
-- Power
+- Power (xʸ)
 - Factorial
-- Sine
-- Cosine
-- Tangent
-- Exit Option
-- Invalid choice handling
-- Division by zero validation
-- Square root input validation
+- Sine (sin)
+- Cosine (cos)
+- Tangent (tan)
+
+## ✅ Additional Features
+
+- Division by Zero Validation
+- Square Root Validation
+- Invalid Choice Handling
+- Simple Console-Based Interface
+- Fast Calculation
 
 ---
 
-## Technologies Used
+# 🛠 Technologies Used
 
 - Java
 - Scanner Class
 - Math Class
+- Object-Oriented Programming Concepts
 
 ---
 
-## Requirements
-
-- Java JDK 8 or above
-- Any Java IDE (VS Code, Eclipse, IntelliJ IDEA, NetBeans) or Command Prompt
-
----
-
-## Project Structure
+# 📁 Project Structure
 
 ```
-ScientificCalculator.java
-README.md
-output.png
+ScientificCalculator/
+│── ScientificCalculator.java
+│── README.md
+│── outputcalc1.png
 ```
 
 ---
 
-## Menu
+# ⚙ Requirements
 
-```
-===== SCIENTIFIC CALCULATOR =====
-
-1. Addition
-2. Subtraction
-3. Multiplication
-4. Division
-5. Exit
-6. Square
-7. Square Root
-8. Power
-9. Factorial
-10. Sine
-11. Cosine
-12. Tangent
-```
+- Java JDK 8 or Above
+- VS Code / Eclipse / IntelliJ IDEA / NetBeans
 
 ---
 
-## How to Run
+# 🚀 How to Run
 
 ### Compile
 
@@ -86,7 +86,7 @@ java ScientificCalculator
 
 ---
 
-## Example Output
+# 📋 Menu
 
 ```
 ===== SCIENTIFIC CALCULATOR =====
@@ -103,6 +103,14 @@ java ScientificCalculator
 10. Sine
 11. Cosine
 12. Tangent
+```
+
+---
+
+# 💻 Sample Output
+
+```
+===== SCIENTIFIC CALCULATOR =====
 
 Enter your choice: 8
 
@@ -114,35 +122,73 @@ Answer = 32.0
 
 ---
 
-## Validations
+# 🛡 Input Validation
 
-- Prevents division by zero.
-- Prevents square root of negative numbers.
-- Displays "Invalid Choice" for incorrect menu selections.
+✔ Division by Zero Handling
 
----
+✔ Square Root of Negative Number Prevention
 
-## Output Screenshot
+✔ Invalid Menu Choice Detection
 
-![Output](outputcalc1.png)
+✔ Error-Free Mathematical Operations
 
 ---
 
-## Concepts Used
+# 📸 Output Screenshot
 
-- Conditional Statements (`if-else`)
-- Loops (`for`)
-- Scanner Class
+
+---
+
+# 📚 Java Concepts Used
+
 - Variables
-- Mathematical Functions
-- User Input
-- Java Math Library
+- Data Types
+- Scanner Class
+- Conditional Statements (if-else)
+- Loops (for)
+- Arithmetic Operators
+- Math Class
+- Functions
+- User Input Handling
 
 ---
 
-## Author
+# 🎯 Learning Outcomes
 
-Sneha S
-B.E. Electronics and Communication Engineering
-University BDT College of Engineering, Davangere
+This project helped in learning:
 
+- Java Programming Basics
+- Mathematical Computations
+- User Interaction
+- Logical Programming
+- Problem Solving
+- Console Application Development
+
+---
+
+# 🔮 Future Improvements
+
+- GUI Version using Java Swing
+- Scientific Expression Evaluation
+- Calculation History
+- Memory Functions
+- Dark Theme
+- Keyboard Shortcuts
+
+---
+
+# 👩‍💻 Author
+
+**Sneha S**
+
+🎓 B.E. Electronics and Communication Engineering
+
+🏫 University BDT College of Engineering, Davangere
+
+---
+
+# ⭐ Support
+
+If you like this project, don't forget to **Star ⭐ the repository** and share it with others.
+
+---
