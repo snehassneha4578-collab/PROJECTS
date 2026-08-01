@@ -136,7 +136,7 @@ Answer = 32.0
 
 # 📸 Output Screenshot
 
-![Output](outputCalc1.png)
+![Output](outputcalc1.png)
 ---
 
 # 📚 Java Concepts Used
