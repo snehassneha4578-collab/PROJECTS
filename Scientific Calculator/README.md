@@ -1,5 +1,14 @@
 # 🧮 Scientific Calculator V4 Professional
 
+![Java](https://img.shields.io/badge/Java-17-orange)
+![GUI](https://img.shields.io/badge/GUI-Java%20Swing-blue)
+![Version](https://img.shields.io/badge/Version-4.0-success)
+![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey)
+![Theme](https://img.shields.io/badge/Theme-Dark%20%2F%20Light-purple)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+![License](https://img.shields.io/badge/License-MIT-blue)
+![Open Source](https://img.shields.io/badge/Open%20Source-YES-brightgreen)
+
 A professional desktop Scientific Calculator developed using **Java** and **Java Swing**. The application provides basic arithmetic operations, advanced scientific functions, memory operations, keyboard shortcuts, clipboard support, history tracking, and Dark/Light theme support with an interactive graphical user interface.
 
 ---
