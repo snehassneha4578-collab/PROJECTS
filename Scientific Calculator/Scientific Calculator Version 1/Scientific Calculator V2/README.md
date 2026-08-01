@@ -141,12 +141,9 @@ Thank you for using Scientific Calculator.
 
 # 📸 Output Screenshot
 
-<p align="center">
-<img src="output.png" width="700">
-</p>
+![Output](outputv2.png)
 
 ---
-
 # 📚 Java Concepts Used
 
 - Variables and Data Types
