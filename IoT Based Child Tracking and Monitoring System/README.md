@@ -28,7 +28,7 @@ The **IoT Child Tracking System** is a **hardware-based mini project** designed 
 
 # 🛠️ Hardware Components
 
-- 🔹 Arduino / ESP32
+- 🔹 ESP32
 - 🔹 GPS Module
 - 🔹 GSM Module
 - 🔹 Power Supply
