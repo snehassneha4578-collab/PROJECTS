@@ -11,6 +11,11 @@
 
 A professional desktop Scientific Calculator developed using **Java** and **Java Swing**. The application provides basic arithmetic operations, advanced scientific functions, memory operations, keyboard shortcuts, clipboard support, history tracking, and Dark/Light theme support with an interactive graphical user interface.
 
+
+## 📸 Application Screenshot
+
+![Scientific Calculator](calculator.png)
+
 ---
 
 ## 📌 Project Information
