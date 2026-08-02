@@ -129,32 +129,6 @@ chmod +x monitor.sh
 
 ---
 
-# 📸 Project Screenshots
-
-## 🖥️ Main Menu
-
-<img src="images/menu.png" width="700">
-
----
-
-## 🧠 Memory Usage Monitoring
-
-<img src="images/memory.png" width="700">
-
----
-
-## ⚡ CPU Usage Monitoring
-
-<img src="images/cpu.png" width="700">
-
----
-
-## 🌐 Network Information
-
-<img src="images/network.png" width="700">
-
----
-
 # 📝 Logging System
 
 The tool automatically creates a log file:
