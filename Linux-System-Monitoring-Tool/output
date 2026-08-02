@@ -1,0 +1,1108 @@
+sneha@Sneha-PC:~$ mkdir Linux-System-Monitoring-Tool
+mkdir: Linux-System-Monitoring-Tool: File exists
+sneha@Sneha-PC:~$ cd Linux-System-Monitoring-Tool
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ pwd
+/home/sneha/Linux-System-Monitoring-Tool
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ touch monitor.sh
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ ls
+README.md  monitor.sh
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ monitor.sh
+monitor.sh: command not found
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ monitor.sh
+monitor.sh: command not found
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ chmod +x monitor.sh
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ ls -l
+total 8
+-rw-r--r-- 1 sneha sneha 1677 Aug  2 13:06 README.md
+-rwxr-xr-x 1 sneha sneha 3425 Aug  2 13:33 monitor.sh
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ ./monitor.sh
+====================================
+   Linux System Monitoring Tool
+====================================
+Welcome!
+
+Current Date and Time:
+Sun Aug  2 13:35:27 UTC 2026
+
+CPU Usage:
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+
+Memory Usage:
+               total        used        free      shared  buff/cache   available
+Mem:           7.4Gi       598Mi       6.6Gi       3.6Mi       339Mi       6.8Gi
+Swap:          2.0Gi          0B       2.0Gi
+
+Disk Usage:
+Filesystem      Size  Used Avail Use% Mounted on
+none            3.7G     0  3.7G   0% /usr/lib/modules/6.18.33.2-microsoft-standard-WSL2
+none            3.7G  4.0K  3.7G   1% /mnt/wsl
+drivers         281G   85G  196G  31% /usr/lib/wsl/drivers
+/dev/sdd       1007G  2.0G  954G   1% /
+none            3.7G   44K  3.7G   1% /mnt/wslg
+none            3.7G     0  3.7G   0% /usr/lib/wsl/lib
+rootfs          3.7G  2.8M  3.7G   1% /init
+none            3.7G  564K  3.7G   1% /run
+none            3.7G     0  3.7G   0% /run/lock
+none            3.7G     0  3.7G   0% /run/shm
+none            3.7G  104K  3.7G   1% /mnt/wslg/versions.txt
+none            3.7G  104K  3.7G   1% /mnt/wslg/doc
+C:\             281G   85G  196G  31% /mnt/c
+D:\             196G   17G  180G   9% /mnt/d
+none            1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+tmpfs           3.7G     0  3.7G   0% /tmp
+none            1.0M     0  1.0M   0% /run/credentials/systemd-resolved.service
+none            1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
+tmpfs           754M   12K  754M   1% /run/user/0
+tmpfs           754M   12K  754M   1% /run/user/1000
+
+Top Running Processes:
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+sneha       2043  0.1  0.0   6268  5540 pts/3    Ss   13:32   0:00 -bash
+root          89  0.0  0.1  35252 12296 ?        Ss   12:53   0:01 /usr/lib/systemd/systemd-udevd
+root           1  0.0  0.2  24312 15444 ?        Ss   12:53   0:01 /sbin/init
+root          47  0.0  0.2  50420 16912 ?        S<s  12:53   0:00 /usr/lib/systemd/systemd-journald
+root         169  0.0  0.3  44096 29488 ?        Ss   12:53   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root         381  0.0  0.1  22340 13620 ?        Ss   12:53   0:00 /usr/lib/systemd/systemd --user
+polkitd      768  0.0  0.1 306444  8320 ?        Ssl  12:55   0:00 /usr/lib/polkit-1/polkitd --no-debug --log-level=notice
+root         176  0.0  0.1  18596  9404 ?        Ss   12:53   0:00 /usr/lib/systemd/systemd-logind
+sneha        621  0.0  0.1  22520 13444 ?        Ss   12:54   0:00 /usr/lib/systemd/systemd --user
+
+System Information:
+Linux Sneha-PC 6.18.33.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun 18 21:54:43 UTC 2026 x86_64 GNU/Linux
+
+Current User:
+sneha
+
+Network Information:
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet 10.255.255.254/32 brd 10.255.255.254 scope global lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host proto kernel_lo
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:15:5d:07:f5:b6 brd ff:ff:ff:ff:ff:ff
+    altname enx00155d07f5b6
+    inet 172.19.67.81/20 brd 172.19.79.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::215:5dff:fe07:f5b6/64 scope link proto kernel_ll
+       valid_lft forever preferred_lft forever
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Exit
+Enter your choice: 5
+Exiting...
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ code monitor.sh
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ ./monitor.sh
+==============================
+ Linux System Monitor
+==============================
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Exit
+Enter your choice: 1
+Sun Aug  2 13:37:42 UTC 2026
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Exit
+Enter your choice: 2
+               total        used        free      shared  buff/cache   available
+Mem:           7.4Gi       595Mi       6.6Gi       3.6Mi       339Mi       6.8Gi
+Swap:          2.0Gi          0B       2.0Gi
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Exit
+Enter your choice: 3
+Filesystem      Size  Used Avail Use% Mounted on
+none            3.7G     0  3.7G   0% /usr/lib/modules/6.18.33.2-microsoft-standard-WSL2
+none            3.7G  4.0K  3.7G   1% /mnt/wsl
+drivers         281G   85G  197G  31% /usr/lib/wsl/drivers
+/dev/sdd       1007G  2.0G  954G   1% /
+none            3.7G   44K  3.7G   1% /mnt/wslg
+none            3.7G     0  3.7G   0% /usr/lib/wsl/lib
+rootfs          3.7G  2.8M  3.7G   1% /init
+none            3.7G  564K  3.7G   1% /run
+none            3.7G     0  3.7G   0% /run/lock
+none            3.7G     0  3.7G   0% /run/shm
+none            3.7G  104K  3.7G   1% /mnt/wslg/versions.txt
+none            3.7G  104K  3.7G   1% /mnt/wslg/doc
+C:\             281G   85G  197G  31% /mnt/c
+D:\             196G   17G  180G   9% /mnt/d
+none            1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+tmpfs           3.7G     0  3.7G   0% /tmp
+none            1.0M     0  1.0M   0% /run/credentials/systemd-resolved.service
+none            1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
+tmpfs           754M   12K  754M   1% /run/user/0
+tmpfs           754M   12K  754M   1% /run/user/1000
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Exit
+Enter your choice: 4
+'%Cpu(s):  0.0 us,  0.6 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Exit
+Enter your choice: 5
+Invalid Choice
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Exit
+Enter your choice: 5
+Exiting Monitor...
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ code monitor.sh
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ ./monitor.sh
+==============================
+ Linux System Monitor
+==============================
+
+System Information:
+Hostname: Sneha-PC
+Kernel Version: 6.18.33.2-microsoft-standard-WSL2
+Current User: sneha
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Exit
+Enter your choice: 1
+Sun Aug  2 13:39:54 UTC 2026
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Exit
+Enter your choice: 2
+               total        used        free      shared  buff/cache   available
+Mem:           7.4Gi       597Mi       6.6Gi       3.6Mi       339Mi       6.8Gi
+Swap:          2.0Gi          0B       2.0Gi
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Exit
+Enter your choice: 3
+Filesystem      Size  Used Avail Use% Mounted on
+none            3.7G     0  3.7G   0% /usr/lib/modules/6.18.33.2-microsoft-standard-WSL2
+none            3.7G  4.0K  3.7G   1% /mnt/wsl
+drivers         281G   85G  197G  31% /usr/lib/wsl/drivers
+/dev/sdd       1007G  2.0G  954G   1% /
+none            3.7G   48K  3.7G   1% /mnt/wslg
+none            3.7G     0  3.7G   0% /usr/lib/wsl/lib
+rootfs          3.7G  2.8M  3.7G   1% /init
+none            3.7G  564K  3.7G   1% /run
+none            3.7G     0  3.7G   0% /run/lock
+none            3.7G     0  3.7G   0% /run/shm
+none            3.7G  104K  3.7G   1% /mnt/wslg/versions.txt
+none            3.7G  104K  3.7G   1% /mnt/wslg/doc
+C:\             281G   85G  197G  31% /mnt/c
+D:\             196G   17G  180G   9% /mnt/d
+none            1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+tmpfs           3.7G     0  3.7G   0% /tmp
+none            1.0M     0  1.0M   0% /run/credentials/systemd-resolved.service
+none            1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
+tmpfs           754M   12K  754M   1% /run/user/0
+tmpfs           754M   12K  754M   1% /run/user/1000
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Exit
+Enter your choice: 4
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Exit
+Enter your choice: 5
+Exiting Monitor...
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ code monitor.sh
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ ./monitor.sh
+==============================
+ Linux System Monitor
+==============================
+
+System Information:
+Hostname: Sneha-PC
+Kernel Version: 6.18.33.2-microsoft-standard-WSL2
+Current User: sneha
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Exit
+Enter your choice: 1
+Current Date and Time:
+Sun Aug  2 13:41:21 UTC 2026
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Exit
+Enter your choice: 2
+Memory Usage:
+               total        used        free      shared  buff/cache   available
+Mem:           7.4Gi       599Mi       6.6Gi       3.6Mi       339Mi       6.8Gi
+Swap:          2.0Gi          0B       2.0Gi
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Exit
+Enter your choice: 3
+Disk Usage:
+Filesystem      Size  Used Avail Use% Mounted on
+none            3.7G     0  3.7G   0% /usr/lib/modules/6.18.33.2-microsoft-standard-WSL2
+none            3.7G  4.0K  3.7G   1% /mnt/wsl
+drivers         281G   85G  197G  31% /usr/lib/wsl/drivers
+/dev/sdd       1007G  2.0G  954G   1% /
+none            3.7G   48K  3.7G   1% /mnt/wslg
+none            3.7G     0  3.7G   0% /usr/lib/wsl/lib
+rootfs          3.7G  2.8M  3.7G   1% /init
+none            3.7G  564K  3.7G   1% /run
+none            3.7G     0  3.7G   0% /run/lock
+none            3.7G     0  3.7G   0% /run/shm
+none            3.7G  104K  3.7G   1% /mnt/wslg/versions.txt
+none            3.7G  104K  3.7G   1% /mnt/wslg/doc
+C:\             281G   85G  197G  31% /mnt/c
+D:\             196G   17G  180G   9% /mnt/d
+none            1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+tmpfs           3.7G     0  3.7G   0% /tmp
+none            1.0M     0  1.0M   0% /run/credentials/systemd-resolved.service
+none            1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
+tmpfs           754M   12K  754M   1% /run/user/0
+tmpfs           754M   12K  754M   1% /run/user/1000
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Exit
+Enter your choice: 4
+CPU Usage:
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Exit
+Enter your choice: 5
+Exiting Monitor...
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ code monitor.sh
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ ./monitor.sh
+==============================
+ Linux System Monitor
+==============================
+
+System Information:
+Hostname: Sneha-PC
+Kernel Version: 6.18.33.2-microsoft-standard-WSL2
+Current User: sneha
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Show Network Information
+6. Exit
+Enter your choice: 5
+Network Information:
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet 10.255.255.254/32 brd 10.255.255.254 scope global lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host proto kernel_lo
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:15:5d:07:f5:b6 brd ff:ff:ff:ff:ff:ff
+    altname enx00155d07f5b6
+    inet 172.19.67.81/20 brd 172.19.79.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::215:5dff:fe07:f5b6/64 scope link proto kernel_ll
+       valid_lft forever preferred_lft forever
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Show Network Information
+6. Exit
+Enter your choice: 6
+Exiting Monitor...
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ code monitor.sh
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ ./monitor.sh
+==============================
+ Linux System Monitor
+==============================
+
+System Information:
+Hostname: Sneha-PC
+Kernel Version: 6.18.33.2-microsoft-standard-WSL2
+Current User: sneha
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Show Network Information
+6. Show Running Processes
+7. Exit
+Enter your choice: 6
+Running Processes:
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.2  24312 15444 ?        Ss   12:53   0:01 /sbin/init
+root           2  0.0  0.0   3180  2212 hvc0     Sl+  12:53   0:00 /init
+root           7  0.0  0.0   3776  2464 hvc0     Sl+  12:53   0:00 plan9 --control-socket 7 --log-level 4 --server-fd 8 -
+root          47  0.0  0.2  50420 16912 ?        S<s  12:53   0:00 /usr/lib/systemd/systemd-journald
+systemd+      82  0.0  0.1  22416 14428 ?        Ss   12:53   0:00 /usr/lib/systemd/systemd-resolved
+root          89  0.0  0.1  35252 12296 ?        Ss   12:53   0:01 /usr/lib/systemd/systemd-udevd
+root         162  0.0  0.0   2888  1952 ?        Ss   12:53   0:00 /bin/sh /usr/lib/systemd/scripts/chronyd-starter.sh -n
+root         163  0.0  0.0   4472  3044 ?        Ss   12:53   0:00 /usr/sbin/cron -f -P
+message+     164  0.0  0.0   8812  5396 ?        Ss   12:53   0:00 @dbus-daemon --system --address=systemd: --nofork --no
+root         169  0.0  0.3  44096 29488 ?        Ss   12:53   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-st
+root         176  0.0  0.1  18596  9404 ?        Ss   12:53   0:00 /usr/lib/systemd/systemd-logind
+syslog       191  0.0  0.0 220548  5568 ?        Ssl  12:53   0:00 /usr/sbin/rsyslogd -n -iNONE
+_chrony      232  0.0  0.0  20424  7672 ?        S    12:53   0:00 /usr/sbin/chronyd -n -F 1 -x
+root         242  0.0  0.0   5492  2764 tty1     Ss+  12:53   0:00 /usr/sbin/agetty --noreset --noclear --issue-file=/etc
+root         250  0.0  0.4 123460 32476 ?        Ssl  12:53   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unatte
+_chrony      256  0.0  0.0  12096  2436 ?        S    12:53   0:00 /usr/sbin/chronyd -n -F 1 -x
+root         339  0.0  0.0   8500  5288 ?        Ss   12:53   0:00 login -- root
+root         381  0.0  0.1  22340 13620 ?        Ss   12:53   0:00 /usr/lib/systemd/systemd --user
+root         383  0.0  0.0  22924  4068 ?        S    12:53   0:00 (sd-pam)
+root         409  0.0  0.0   6004  5272 pts/1    Ss+  12:53   0:00 -bash
+root         566  0.0  0.0   3188  1124 ?        Ss   12:54   0:00 /init
+root         567  0.0  0.0   3204  1132 ?        S    12:54   0:00 /init
+sneha        569  0.0  0.0   6108  5448 pts/0    Ss+  12:54   0:00 -bash
+root         575  0.0  0.0   8648  5468 ?        Ss   12:54   0:00 login -- sneha
+sneha        621  0.0  0.1  22520 13444 ?        Ss   12:54   0:00 /usr/lib/systemd/systemd --user
+sneha        623  0.0  0.0  22916  4084 ?        S    12:54   0:00 (sd-pam)
+sneha        649  0.0  0.0   5976  5328 pts/2    Ss+  12:54   0:00 -bash
+polkitd      768  0.0  0.1 306444  8320 ?        Ssl  12:55   0:00 /usr/lib/polkit-1/polkitd --no-debug --log-level=notic
+root        2040  0.0  0.0   3188  1124 ?        Ss   13:32   0:00 /init
+root        2041  0.0  0.0   3204  1260 ?        S    13:32   0:00 /init
+sneha       2043  0.0  0.0   6268  5540 pts/3    Ss   13:32   0:00 -bash
+sneha       2451  0.3  0.0   4948  3668 pts/3    S+   13:45   0:00 /bin/bash ./monitor.sh
+sneha       2455  0.0  0.0   7160  4296 pts/3    R+   13:45   0:00 ps aux
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Show Network Information
+6. Show Running Processes
+7. Exit
+Enter your choice: 7
+Exiting Monitor...
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ code monitor.sh
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ ./monitor.sh
+==============================
+ Linux System Monitor
+==============================
+
+System Information:
+Hostname: Sneha-PC
+Kernel Version: 6.18.33.2-microsoft-standard-WSL2
+Current User: sneha
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Show Network Information
+6. Show Running Processes
+7. Show System Uptime
+8. Exit
+Enter your choice: 7
+System Uptime:
+ 13:47:05 up  1:11,  2 users,  load average: 0.00, 0.00, 0.00
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Show Network Information
+6. Show Running Processes
+7. Show System Uptime
+8. Exit
+Enter your choice: 8
+Exiting Monitor...
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ code monitor.sh
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ chmod +x monitor.sh
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ ./monitor.sh
+==============================
+ Linux System Monitor
+==============================
+
+System Information:
+Hostname: Sneha-PC
+Kernel Version: 6.18.33.2-microsoft-standard-WSL2
+Current User: sneha
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Show Network Information
+6. Show Running Processes
+7. Show System Uptime
+8. Exit
+Enter your choice: 1
+Current Date and Time:
+Sun Aug  2 13:49:04 UTC 2026
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Show Network Information
+6. Show Running Processes
+7. Show System Uptime
+8. Exit
+Enter your choice: 2
+Memory Usage:
+               total        used        free      shared  buff/cache   available
+Mem:           7.4Gi       600Mi       6.6Gi       3.6Mi       339Mi       6.8Gi
+Swap:          2.0Gi          0B       2.0Gi
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Show Network Information
+6. Show Running Processes
+7. Show System Uptime
+8. Exit
+Enter your choice: 3
+Disk Usage:
+Filesystem      Size  Used Avail Use% Mounted on
+none            3.7G     0  3.7G   0% /usr/lib/modules/6.18.33.2-microsoft-standard-WSL2
+none            3.7G  4.0K  3.7G   1% /mnt/wsl
+drivers         281G   85G  197G  31% /usr/lib/wsl/drivers
+/dev/sdd       1007G  2.0G  954G   1% /
+none            3.7G   48K  3.7G   1% /mnt/wslg
+none            3.7G     0  3.7G   0% /usr/lib/wsl/lib
+rootfs          3.7G  2.8M  3.7G   1% /init
+none            3.7G  564K  3.7G   1% /run
+none            3.7G     0  3.7G   0% /run/lock
+none            3.7G     0  3.7G   0% /run/shm
+none            3.7G  104K  3.7G   1% /mnt/wslg/versions.txt
+none            3.7G  104K  3.7G   1% /mnt/wslg/doc
+C:\             281G   85G  197G  31% /mnt/c
+D:\             196G   17G  180G   9% /mnt/d
+none            1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+tmpfs           3.7G     0  3.7G   0% /tmp
+none            1.0M     0  1.0M   0% /run/credentials/systemd-resolved.service
+none            1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
+tmpfs           754M   12K  754M   1% /run/user/0
+tmpfs           754M   12K  754M   1% /run/user/1000
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Show Network Information
+6. Show Running Processes
+7. Show System Uptime
+8. Exit
+Enter your choice:
+Invalid Choice
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Show Network Information
+6. Show Running Processes
+7. Show System Uptime
+8. Exit
+Enter your choice: 4
+CPU Usage:
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni, 97.6 id,  2.4 wa,  0.0 hi,  0.0 si,  0.0 st
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Show Network Information
+6. Show Running Processes
+7. Show System Uptime
+8. Exit
+Enter your choice: 5
+Network Information:
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet 10.255.255.254/32 brd 10.255.255.254 scope global lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host proto kernel_lo
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:15:5d:07:f5:b6 brd ff:ff:ff:ff:ff:ff
+    altname enx00155d07f5b6
+    inet 172.19.67.81/20 brd 172.19.79.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::215:5dff:fe07:f5b6/64 scope link proto kernel_ll
+       valid_lft forever preferred_lft forever
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Show Network Information
+6. Show Running Processes
+7. Show System Uptime
+8. Exit
+Enter your choice: 6
+Running Processes:
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.2  24312 15444 ?        Ss   12:53   0:01 /sbin/init
+root           2  0.0  0.0   3180  2212 hvc0     Sl+  12:53   0:00 /init
+root           7  0.0  0.0   3776  2464 hvc0     Sl+  12:53   0:01 plan9 --control-socket 7 --log-level 4 --server-fd 8 -
+root          47  0.0  0.2  50420 16912 ?        S<s  12:53   0:00 /usr/lib/systemd/systemd-journald
+systemd+      82  0.0  0.1  22416 14428 ?        Ss   12:53   0:00 /usr/lib/systemd/systemd-resolved
+root          89  0.0  0.1  35252 12296 ?        Ss   12:53   0:01 /usr/lib/systemd/systemd-udevd
+root         162  0.0  0.0   2888  1952 ?        Ss   12:53   0:00 /bin/sh /usr/lib/systemd/scripts/chronyd-starter.sh -n
+root         163  0.0  0.0   4472  3044 ?        Ss   12:53   0:00 /usr/sbin/cron -f -P
+message+     164  0.0  0.0   8812  5396 ?        Ss   12:53   0:00 @dbus-daemon --system --address=systemd: --nofork --no
+root         169  0.0  0.3  44096 29488 ?        Ss   12:53   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-st
+root         176  0.0  0.1  18596  9404 ?        Ss   12:53   0:00 /usr/lib/systemd/systemd-logind
+syslog       191  0.0  0.0 220548  5568 ?        Ssl  12:53   0:00 /usr/sbin/rsyslogd -n -iNONE
+_chrony      232  0.0  0.0  20424  7672 ?        S    12:53   0:00 /usr/sbin/chronyd -n -F 1 -x
+root         242  0.0  0.0   5492  2764 tty1     Ss+  12:53   0:00 /usr/sbin/agetty --noreset --noclear --issue-file=/etc
+root         250  0.0  0.4 123460 32476 ?        Ssl  12:53   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unatte
+_chrony      256  0.0  0.0  12096  2436 ?        S    12:53   0:00 /usr/sbin/chronyd -n -F 1 -x
+root         339  0.0  0.0   8500  5288 ?        Ss   12:53   0:00 login -- root
+root         381  0.0  0.1  22340 13620 ?        Ss   12:53   0:00 /usr/lib/systemd/systemd --user
+root         383  0.0  0.0  22924  4068 ?        S    12:53   0:00 (sd-pam)
+root         409  0.0  0.0   6004  5272 pts/1    Ss+  12:53   0:00 -bash
+root         566  0.0  0.0   3188  1124 ?        Ss   12:54   0:00 /init
+root         567  0.0  0.0   3204  1132 ?        S    12:54   0:00 /init
+sneha        569  0.0  0.0   6108  5448 pts/0    Ss+  12:54   0:00 -bash
+root         575  0.0  0.0   8648  5468 ?        Ss   12:54   0:00 login -- sneha
+sneha        621  0.0  0.1  22520 13444 ?        Ss   12:54   0:00 /usr/lib/systemd/systemd --user
+sneha        623  0.0  0.0  22916  4084 ?        S    12:54   0:00 (sd-pam)
+sneha        649  0.0  0.0   5976  5328 pts/2    Ss+  12:54   0:00 -bash
+polkitd      768  0.0  0.1 306444  8320 ?        Ssl  12:55   0:00 /usr/lib/polkit-1/polkitd --no-debug --log-level=notic
+root        2040  0.0  0.0   3188  1124 ?        Ss   13:32   0:00 /init
+root        2041  0.0  0.0   3204  1260 ?        S    13:32   0:00 /init
+sneha       2043  0.0  0.0   6268  5540 pts/3    Ss   13:32   0:00 -bash
+sneha       2553  0.0  0.0   4948  3644 pts/3    S+   13:48   0:00 /bin/bash ./monitor.sh
+sneha       2572  0.0  0.0   7160  4296 pts/3    R+   13:49   0:00 ps aux
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Show Network Information
+6. Show Running Processes
+7. Show System Uptime
+8. Exit
+Enter your choice: 7
+System Uptime:
+ 13:49:14 up  1:14,  2 users,  load average: 0.00, 0.00, 0.00
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Show Network Information
+6. Show Running Processes
+7. Show System Uptime
+8. Exit
+Enter your choice: 8
+Exiting Monitor...
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ ls
+README.md  monitor.sh  system_monitor.log
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ cat system_monitor.log
+Monitoring Started: Sun Aug  2 13:48:43 UTC 2026
+Sun Aug  2 13:49:04 UTC 2026
+               total        used        free      shared  buff/cache   available
+Mem:           7.4Gi       600Mi       6.6Gi       3.6Mi       339Mi       6.8Gi
+Swap:          2.0Gi          0B       2.0Gi
+Filesystem      Size  Used Avail Use% Mounted on
+none            3.7G     0  3.7G   0% /usr/lib/modules/6.18.33.2-microsoft-standard-WSL2
+none            3.7G  4.0K  3.7G   1% /mnt/wsl
+drivers         281G   85G  197G  31% /usr/lib/wsl/drivers
+/dev/sdd       1007G  2.0G  954G   1% /
+none            3.7G   48K  3.7G   1% /mnt/wslg
+none            3.7G     0  3.7G   0% /usr/lib/wsl/lib
+rootfs          3.7G  2.8M  3.7G   1% /init
+none            3.7G  564K  3.7G   1% /run
+none            3.7G     0  3.7G   0% /run/lock
+none            3.7G     0  3.7G   0% /run/shm
+none            3.7G  104K  3.7G   1% /mnt/wslg/versions.txt
+none            3.7G  104K  3.7G   1% /mnt/wslg/doc
+C:\             281G   85G  197G  31% /mnt/c
+D:\             196G   17G  180G   9% /mnt/d
+none            1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+tmpfs           3.7G     0  3.7G   0% /tmp
+none            1.0M     0  1.0M   0% /run/credentials/systemd-resolved.service
+none            1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
+tmpfs           754M   12K  754M   1% /run/user/0
+tmpfs           754M   12K  754M   1% /run/user/1000
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet 10.255.255.254/32 brd 10.255.255.254 scope global lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host proto kernel_lo
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:15:5d:07:f5:b6 brd ff:ff:ff:ff:ff:ff
+    altname enx00155d07f5b6
+    inet 172.19.67.81/20 brd 172.19.79.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::215:5dff:fe07:f5b6/64 scope link proto kernel_ll
+       valid_lft forever preferred_lft forever
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.2  24312 15444 ?        Ss   12:53   0:01 /sbin/init
+root           2  0.0  0.0   3180  2212 hvc0     Sl+  12:53   0:00 /init
+root           7  0.0  0.0   3776  2464 hvc0     Sl+  12:53   0:01 plan9 --control-socket 7 --log-level 4 --server-fd 8 --pipe-fd 10 --log-truncate
+root          47  0.0  0.2  50420 16912 ?        S<s  12:53   0:00 /usr/lib/systemd/systemd-journald
+systemd+      82  0.0  0.1  22416 14428 ?        Ss   12:53   0:00 /usr/lib/systemd/systemd-resolved
+root          89  0.0  0.1  35252 12296 ?        Ss   12:53   0:01 /usr/lib/systemd/systemd-udevd
+root         162  0.0  0.0   2888  1952 ?        Ss   12:53   0:00 /bin/sh /usr/lib/systemd/scripts/chronyd-starter.sh -n -F 1
+root         163  0.0  0.0   4472  3044 ?        Ss   12:53   0:00 /usr/sbin/cron -f -P
+message+     164  0.0  0.0   8812  5396 ?        Ss   12:53   0:00 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root         169  0.0  0.3  44096 29488 ?        Ss   12:53   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root         176  0.0  0.1  18596  9404 ?        Ss   12:53   0:00 /usr/lib/systemd/systemd-logind
+syslog       191  0.0  0.0 220548  5568 ?        Ssl  12:53   0:00 /usr/sbin/rsyslogd -n -iNONE
+_chrony      232  0.0  0.0  20424  7672 ?        S    12:53   0:00 /usr/sbin/chronyd -n -F 1 -x
+root         242  0.0  0.0   5492  2764 tty1     Ss+  12:53   0:00 /usr/sbin/agetty --noreset --noclear --issue-file=/etc/issue:/etc/issue.d:/run/issue.d:/usr/lib/issue.d - linux
+root         250  0.0  0.4 123460 32476 ?        Ssl  12:53   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+_chrony      256  0.0  0.0  12096  2436 ?        S    12:53   0:00 /usr/sbin/chronyd -n -F 1 -x
+root         339  0.0  0.0   8500  5288 ?        Ss   12:53   0:00 login -- root
+root         381  0.0  0.1  22340 13620 ?        Ss   12:53   0:00 /usr/lib/systemd/systemd --user
+root         383  0.0  0.0  22924  4068 ?        S    12:53   0:00 (sd-pam)
+root         409  0.0  0.0   6004  5272 pts/1    Ss+  12:53   0:00 -bash
+root         566  0.0  0.0   3188  1124 ?        Ss   12:54   0:00 /init
+root         567  0.0  0.0   3204  1132 ?        S    12:54   0:00 /init
+sneha        569  0.0  0.0   6108  5448 pts/0    Ss+  12:54   0:00 -bash
+root         575  0.0  0.0   8648  5468 ?        Ss   12:54   0:00 login -- sneha
+sneha        621  0.0  0.1  22520 13444 ?        Ss   12:54   0:00 /usr/lib/systemd/systemd --user
+sneha        623  0.0  0.0  22916  4084 ?        S    12:54   0:00 (sd-pam)
+sneha        649  0.0  0.0   5976  5328 pts/2    Ss+  12:54   0:00 -bash
+polkitd      768  0.0  0.1 306444  8320 ?        Ssl  12:55   0:00 /usr/lib/polkit-1/polkitd --no-debug --log-level=notice
+root        2040  0.0  0.0   3188  1124 ?        Ss   13:32   0:00 /init
+root        2041  0.0  0.0   3204  1260 ?        S    13:32   0:00 /init
+sneha       2043  0.0  0.0   6268  5540 pts/3    Ss   13:32   0:00 -bash
+sneha       2553  0.0  0.0   4948  3644 pts/3    S+   13:48   0:00 /bin/bash ./monitor.sh
+sneha       2573  0.0  0.0   7160  4304 pts/3    R+   13:49   0:00 ps aux
+ 13:49:14 up  1:14,  2 users,  load average: 0.00, 0.00, 0.00
+Monitoring Stopped: Sun Aug  2 13:49:15 UTC 2026
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ code README.md
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ cd Linux-System-Monitoring-Tool
+-bash: cd: Linux-System-Monitoring-Tool: No such file or directory
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ ls
+README.md  monitor.sh  system_monitor.log
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+        modified:   monitor.sh
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        system_monitor.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ git add .
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+        modified:   monitor.sh
+        new file:   system_monitor.log
+
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ git commit -m "Updated monitoring tool with logging and documentation"
+[main 7692afd] Updated monitoring tool with logging and documentation
+ 3 files changed, 157 insertions(+), 164 deletions(-)
+ create mode 100644 system_monitor.log
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ git push origin main
+Username for 'https://github.com': snehassneha4578-collab
+Password for 'https://snehassneha4578-collab@github.com':
+remote: Invalid username or token. Password authentication is not supported for Git operations.
+fatal: Authentication failed for 'https://github.com/snehassneha4578-collab/Linux-System-Monitoring-Tool.git/'
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ code monitor.sh
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ chmod +x monitor.sh
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ ./monitor.sh
+================================
+     Linux System Monitor
+================================
+
+System Information:
+Hostname       : Sneha-PC
+Kernel Version : 6.18.33.2-microsoft-standard-WSL2
+Current User   : sneha
+System Time    : Sun Aug  2 13:59:03 UTC 2026
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Show Network Information
+6. Show Running Processes
+7. Show System Uptime
+8. Real-Time Monitoring
+9. Exit
+Enter your choice: 1
+Current Date and Time:
+Sun Aug  2 13:59:24 UTC 2026
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Show Network Information
+6. Show Running Processes
+7. Show System Uptime
+8. Real-Time Monitoring
+9. Exit
+Enter your choice: 2
+Memory Usage:
+               total        used        free      shared  buff/cache   available
+Mem:           7.4Gi       601Mi       6.6Gi       3.6Mi       341Mi       6.8Gi
+Swap:          2.0Gi          0B       2.0Gi
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Show Network Information
+6. Show Running Processes
+7. Show System Uptime
+8. Real-Time Monitoring
+9. Exit
+Enter your choice: 3
+Disk Usage:
+Filesystem      Size  Used Avail Use% Mounted on
+none            3.7G     0  3.7G   0% /usr/lib/modules/6.18.33.2-microsoft-standard-WSL2
+none            3.7G  4.0K  3.7G   1% /mnt/wsl
+drivers         281G   85G  196G  31% /usr/lib/wsl/drivers
+/dev/sdd       1007G  2.0G  954G   1% /
+none            3.7G   52K  3.7G   1% /mnt/wslg
+none            3.7G     0  3.7G   0% /usr/lib/wsl/lib
+rootfs          3.7G  2.8M  3.7G   1% /init
+none            3.7G  568K  3.7G   1% /run
+none            3.7G     0  3.7G   0% /run/lock
+none            3.7G     0  3.7G   0% /run/shm
+none            3.7G  104K  3.7G   1% /mnt/wslg/versions.txt
+none            3.7G  104K  3.7G   1% /mnt/wslg/doc
+C:\             281G   85G  196G  31% /mnt/c
+D:\             196G   17G  180G   9% /mnt/d
+none            1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+tmpfs           3.7G     0  3.7G   0% /tmp
+none            1.0M     0  1.0M   0% /run/credentials/systemd-resolved.service
+none            1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
+tmpfs           754M   12K  754M   1% /run/user/0
+tmpfs           754M   12K  754M   1% /run/user/1000
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Show Network Information
+6. Show Running Processes
+7. Show System Uptime
+8. Real-Time Monitoring
+9. Exit
+Enter your choice: 4
+CPU Usage:
+%Cpu(s):  0.0 us,  0.6 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Show Network Information
+6. Show Running Processes
+7. Show System Uptime
+8. Real-Time Monitoring
+9. Exit
+Enter your choice: 5
+Network Information:
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet 10.255.255.254/32 brd 10.255.255.254 scope global lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host proto kernel_lo
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:15:5d:07:f5:b6 brd ff:ff:ff:ff:ff:ff
+    altname enx00155d07f5b6
+    inet 172.19.67.81/20 brd 172.19.79.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::215:5dff:fe07:f5b6/64 scope link proto kernel_ll
+       valid_lft forever preferred_lft forever
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Show Network Information
+6. Show Running Processes
+7. Show System Uptime
+8. Real-Time Monitoring
+9. Exit
+Enter your choice: 6
+Running Processes:
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.2  24312 15444 ?        Ss   12:53   0:01 /sbin/init
+root           2  0.0  0.0   3180  2212 hvc0     Sl+  12:53   0:00 /init
+root           7  0.0  0.0   3916  2468 hvc0     Sl+  12:53   0:02 plan9 --control-socket 7 --log-level 4 --server-fd 8 -
+root          47  0.0  0.2  50420 16920 ?        S<s  12:53   0:00 /usr/lib/systemd/systemd-journald
+systemd+      82  0.0  0.1  22416 14428 ?        Ss   12:53   0:00 /usr/lib/systemd/systemd-resolved
+root          89  0.0  0.1  35252 12296 ?        Ss   12:53   0:02 /usr/lib/systemd/systemd-udevd
+root         162  0.0  0.0   2888  1952 ?        Ss   12:53   0:00 /bin/sh /usr/lib/systemd/scripts/chronyd-starter.sh -n
+root         163  0.0  0.0   4472  3044 ?        Ss   12:53   0:00 /usr/sbin/cron -f -P
+message+     164  0.0  0.0   8812  5396 ?        Ss   12:53   0:00 @dbus-daemon --system --address=systemd: --nofork --no
+root         169  0.0  0.3  44096 29488 ?        Ss   12:53   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-st
+root         176  0.0  0.1  18596  9404 ?        Ss   12:53   0:00 /usr/lib/systemd/systemd-logind
+syslog       191  0.0  0.0 220548  5568 ?        Ssl  12:53   0:00 /usr/sbin/rsyslogd -n -iNONE
+_chrony      232  0.0  0.0  20424  7672 ?        S    12:53   0:00 /usr/sbin/chronyd -n -F 1 -x
+root         242  0.0  0.0   5492  2764 tty1     Ss+  12:53   0:00 /usr/sbin/agetty --noreset --noclear --issue-file=/etc
+root         250  0.0  0.4 123460 32476 ?        Ssl  12:53   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unatte
+_chrony      256  0.0  0.0  12096  2436 ?        S    12:53   0:00 /usr/sbin/chronyd -n -F 1 -x
+root         339  0.0  0.0   8500  5288 ?        Ss   12:53   0:00 login -- root
+root         381  0.0  0.1  22340 13620 ?        Ss   12:53   0:00 /usr/lib/systemd/systemd --user
+root         383  0.0  0.0  22924  4068 ?        S    12:53   0:00 (sd-pam)
+root         409  0.0  0.0   6004  5272 pts/1    Ss+  12:53   0:00 -bash
+root         566  0.0  0.0   3188  1124 ?        Ss   12:54   0:00 /init
+root         567  0.0  0.0   3204  1132 ?        S    12:54   0:00 /init
+sneha        569  0.0  0.0   6108  5448 pts/0    Ss+  12:54   0:00 -bash
+root         575  0.0  0.0   8648  5468 ?        Ss   12:54   0:00 login -- sneha
+sneha        621  0.0  0.1  22520 13444 ?        Ss   12:54   0:00 /usr/lib/systemd/systemd --user
+sneha        623  0.0  0.0  22916  4084 ?        S    12:54   0:00 (sd-pam)
+sneha        649  0.0  0.0   5976  5328 pts/2    Ss+  12:54   0:00 -bash
+polkitd      768  0.0  0.1 306444  8320 ?        Ssl  12:55   0:00 /usr/lib/polkit-1/polkitd --no-debug --log-level=notic
+root        2040  0.0  0.0   3188  1124 ?        Ss   13:32   0:00 /init
+root        2041  0.0  0.0   3204  1260 ?        S    13:32   0:00 /init
+sneha       2043  0.0  0.0   6268  5540 pts/3    Ss   13:32   0:00 -bash
+root        2724  0.0  0.1 1866032 15388 ?       Ssl  13:55   0:00 /usr/libexec/wsl-pro-service
+sneha       2804  0.0  0.0   4948  3668 pts/3    S+   13:59   0:00 /bin/bash ./monitor.sh
+sneha       2822  0.0  0.0   7160  4304 pts/3    R+   13:59   0:00 ps aux
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Show Network Information
+6. Show Running Processes
+7. Show System Uptime
+8. Real-Time Monitoring
+9. Exit
+Enter your choice: 7
+System Uptime:
+ 13:59:32 up  1:24,  2 users,  load average: 0.12, 0.04, 0.01
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Show Network Information
+6. Show Running Processes
+7. Show System Uptime
+8. Real-Time Monitoring
+9. Exit
+Enter your choice: 8
+Starting Real-Time Monitoring...
+top - 13:59:55 up  1:24,  2 users,  load average: 0.08, 0.04, 0.01
+Tasks:  36 total,   1 running,  35 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   7531.7 total,   6740.3 free,    603.8 used,    341.2 buff/cache
+MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.   6927.9 avail Mem
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+     89 root      20   0   35252  12296   9088 S   0.3   0.2   0:02.32 systemd-udevd
+      1 root      20   0   24312  15444  11556 S   0.0   0.2   0:01.23 systemd
+      2 root      20   0    3180   2212   2072 S   0.0   0.0   0:00.01 init-systemd(Ub
+      7 root      20   0    3916   2468   2008 S   0.0   0.0   0:02.07 init
+     47 root      19  -1   50420  16920  15612 S   0.0   0.2   0:00.39 systemd-journal
+     82 systemd+  20   0   22416  14428  11932 S   0.0   0.2   0:00.12 systemd-resolve
+    162 root      20   0    2888   1952   1820 S   0.0   0.0   0:00.12 chronyd-starter
+    163 root      20   0    4472   3044   2796 S   0.0   0.0   0:00.03 cron
+    164 message+  20   0    8812   5396   4660 S   0.0   0.1   0:00.12 dbus-daemon
+    169 root      20   0   44096  29488  14360 S   0.0   0.4   0:00.24 networkd-dispat
+    176 root      20   0   18596   9404   8116 S   0.0   0.1   0:00.19 systemd-logind
+    191 syslog    20   0  220548   5568   4648 S   0.0   0.1   0:00.13 rsyslogd
+    232 _chrony   20   0   20424   7672   6864 S   0.0   0.1   0:00.10 chronyd
+    242 root      20   0    5492   2764   2580 S   0.0   0.0   0:00.00 agetty
+    250 root      20   0  123460  32476  17868 S   0.0   0.4   0:00.10 unattended-upgr
+    256 _chrony   20   0   12096   2436   1792 S   0.0   0.0   0:00.00 chronyd
+    339 root      20   0    8500   5288   4460 S   0.0   0.1   0:00.01 login
+    381 root      20   0   22340  13620  11004 S   0.0   0.2   0:00.23 systemd
+    383 root      20   0   22924   4068   2072 S   0.0   0.1   0:00.00 (sd-pam)
+    409 root      20   0    6004   5272   3864 S   0.0   0.1   0:00.02 bash
+    566 root      20   0    3188   1124    980 S   0.0   0.0   0:00.00 SessionLeader
+    567 root      20   0    3204   1132    980 S   0.0   0.0   0:00.01 Relay(569)
+    569 sneha     20   0    6108   5448   3864 S   0.0   0.1   0:00.05 bash
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Show Network Information
+6. Show Running Processes
+7. Show System Uptime
+8. Real-Time Monitoring
+9. Exit
+Enter your choice: 9
+Exiting Monitor...
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ ./monitor.sh
+================================
+     Linux System Monitor
+================================
+
+System Information:
+Hostname       : Sneha-PC
+Kernel Version : 6.18.33.2-microsoft-standard-WSL2
+Current User   : sneha
+System Time    : Sun Aug  2 14:01:04 UTC 2026
+
+Choose Monitoring Option:
+1. Show Date and Time
+2. Show Memory Usage
+3. Show Disk Usage
+4. Show CPU Usage
+5. Show Network Information
+6. Show Running Processes
+7. Show System Uptime
+8. Real-Time Monitoring
+9. Exit
+Enter your choice: 9
+Exiting Monitor...
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ ^C
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ sudo apt install gnome-screenshot
+[sudo: authenticate] Password:
+Installing:
+  gnome-screenshot
+
+Installing dependencies:
+  libhandy-1-0
+
+Summary:
+  Upgrading: 0, Installing: 2, Removing: 0, Not Upgrading: 7
+  Download size: 414 kB
+  Space needed: 1900 kB / 1024 GB available
+
+Continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 libhandy-1-0 amd64 1.8.3-3build1 [234 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/universe amd64 gnome-screenshot amd64 41.0-3build1 [180 kB]
+Fetched 414 kB in 2s (192 kB/s)
+Selecting previously unselected package libhandy-1-0:amd64.
+(Reading database ... 35898 files and directories currently installed.)
+Preparing to unpack .../libhandy-1-0_1.8.3-3build1_amd64.deb ...
+Unpacking libhandy-1-0:amd64 (1.8.3-3build1) ...
+Selecting previously unselected package gnome-screenshot.
+Preparing to unpack .../gnome-screenshot_41.0-3build1_amd64.deb ...
+Unpacking gnome-screenshot (41.0-3build1) ...
+Setting up libhandy-1-0:amd64 (1.8.3-3build1) ...
+Setting up gnome-screenshot (41.0-3build1) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for libglib2.0-0t64:amd64 (2.88.0-1) ...
+Processing triggers for hicolor-icon-theme (0.18-2build1) ...
+Processing triggers for libc-bin (2.43-2ubuntu2.3) ...
+sneha@Sneha-PC:~/Linux-System-Monitoring-Tool$ gnome-screenshot
+** Message: 14:04:38.330: Unable to use GNOME Shell's builtin screenshot interface, resorting to fallback X11.
+
+(gnome-screenshot:2999): Gdk-CRITICAL **: 14:04:38.330: gdk_pixbuf_get_from_surface: assertion 'width > 0 && height > 0' failed
+
+(gnome-screenshot:2999): GdkPixbuf-CRITICAL **: 14:04:38.330: gdk_pixbuf_get_width: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(gnome-screenshot:2999): GdkPixbuf-CRITICAL **: 14:04:38.330: gdk_pixbuf_get_height: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+
+(gnome-screenshot:2999): GdkPixbuf-CRITICAL **: 14:04:38.330: gdk_pixbuf_get_width: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(gnome-screenshot:2999): GdkPixbuf-CRITICAL **: 14:04:38.330: gdk_pixbuf_get_height: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(gnome-screenshot:2999): Gtk-CRITICAL **: 14:04:38.487: gtk_window_resize: assertion 'width > 0' failed
+
+** (gnome-screenshot:2999): CRITICAL **: 14:04:38.488: Unable to capture a screenshot of any window
+S
