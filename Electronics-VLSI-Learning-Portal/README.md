@@ -130,19 +130,19 @@ Electronics-VLSI-Learning-Portal/
 
 > 📷 Electronics
 
-![Electronics](images/electronics.png)
+![Electronics](electronics.png)
 
 > 📷 VLSI
 
-![VLSI](images/vlsi.png)
+![VLSI](vlsi.png)
 
 > 📷 Verilog
 
-![Verilog](images/verilog.png)
+![Verilog](verilog.png)
 
 > 📷 Cadence
 
-![Cadence](images/cadence.png)
+![Cadence](cadence.png)
 
 ---
 
